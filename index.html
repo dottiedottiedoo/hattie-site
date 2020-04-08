@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hattie</title>
+  <link href="https://fonts.googleapis.com/css?family=Coiny|Open+Sans" rel="stylesheet"></link>
+  <link rel="stylesheet" href="main.css">
+  <script src='jquery-3.3.1.min.js'></script>
+  <script src="p5.min.js"></script>
+</head>
+
+<body>
+
+  <!-- panel -->
+  <div id='panel'>
+    <img id='graffiti' src="images/graffiti.PNG">
+  </div>
+  
+
+  <!-- side -->
+  <div id='side'>
+    
+    <div id='me'>
+      Me
+      <img src="images/me.PNG">
+    </div>
+    
+    <div id='pictures'>
+      Pictures
+      <img src="images/photos.png">
+    </div>
+    
+    <div id='Videos'>
+      Videos
+      <img src="images/videos.png">
+    </div>
+
+    <div id='jokes'>
+      Jokes
+      <img  src="images/jokes.PNG">
+    </div>
+    
+    <div id='games'>
+      Games
+      <img src="images/games.png">
+    </div>
+    
+    <div id='code'>
+      Code
+      <img src="images/code.png">
+    </div>
+
+  </div>
+
+
+  <!-- popups -->
+  
+  <div id='me-popup' class="popup">
+    <img id='me-picture' src="images/tiger.jfif">
+    <h1>Hello, I am HATTIE!</h1>
+    <p>I live in France and I am 8.</p>
+    <p>Here is me with my brother and my dogs.</p>
+    <p>I hope you enjoy looking at my website.</p>
+  </div>
+
+  <div id='pictures-popup' class="popup">
+    <div id='picture'></div>
+    <div id='next-picture'>&#8250;</div>
+  </div>
+
+  <div id='videos-popup' class="popup">
+
+<!-- !!!!!!!!!!!!!!!!!WHY IS POPUP NOT POPPING UP??????????????????????
+get video icon -->
+
+  </div>
+
+  <div id='jokes-popup' class="popup">
+    <p id='joke-question'></p>
+    <p id='joke-answer'></p>
+    <div class="button" id='joke-show-answer'>BOOM!</div>
+    <div class="button" id='joke-new'>New joke</div> 
+  </div>
+    
+  <div id='games-popup' class="popup">
+  
+    <h1 style="text-align:center">Xbox games</h1>
+
+    <img class="screenshot" src="images/screenshots/celeste.jfif">
+    <h2>Celeste: 8/10</h2>
+    <p><b>About:</b> A 2D platform game where a young girl is climbing a mountain.</p>
+    <p><b>Good:</b> Fast and simple (but tricky!).  It has multiple levels of different scenary.</p>
+    <p><b>Bad:</b> The retro graphics may not be your thing.</p>
+
+    <div class="splitter"></div>
+
+    <img class="screenshot" src="images/screenshots/kings-quest.jfif">
+    <h2>King's Quest: 9/10</h2>
+    <p><b>About:</b> Adventure and puzzle solving and a quest to be king.</p>
+    <p><b>Good:</b> Funny characters and interesting problems to solve.</p>
+    <p><b>Bad:</b> If you go back to some old places it sometimes takes a while to get back because he only jogs.</p>
+    
+    <div class="splitter"></div>
+
+    <img class="screenshot" src="images/screenshots/lumo.png">
+    <h2>Lumo: 8/10</h2>
+    <p><b>About:</b> A girl trapped in a computer! She must get out - one 3D room at a time.</p>
+    <p><b>Good:</b> Pretty to look at, some brilliant rooms and different surfaces on the floors: ice, stone and carpet.</p>
+    <p><b>Bad:</b> At first, it is hard to find the computer in which you get stuck.</p>
+
+    <div class="splitter"></div>
+
+    <img class="screenshot" src="images/screenshots/trove.jfif">
+    <h2>Trove: 10/10</h2>
+    <p><b>About:</b> A "massively multiplayer online role-playing game" but can also be played individually. You can mine or steal materials and use them to create different objects and rides.</p>
+    <p><b>Good:</b> Fast and simple (but tricky!).  It has multiple worlds of different scenary.</p>
+    <p><b>Bad:</b> You need certain amounts of Trove Mastery to travel through some portals.</p>
+
+    <div class="splitter"></div>
+
+    <img class="screenshot" src="images/screenshots/sparkle-2.jfif">
+    <h2>Sparkle 2: 8/10</h2>
+    <p><b>About:</b> Shoot balls, chains of the same colour of length three or more explode.</p>
+    <p><b>Good:</b> Great power-ups.</p>  
+    <p><b>Bad:</b> Quite short.</p>
+  
+    </div>
+
+  <div id='code-popup' class="popup">
+    <div id='code-wrapper'></div>
+    <div id='next-code'>&#8250;</div>
+  </div>
+  
+  <script src="index.js"></script>
+  <!-- <script id="code-example" src=""></script> -->
+
+</body>
+</html>
