@@ -1,4 +1,8 @@
-{
+new p5(p => { 
+  
+  removeCodeExample();
+  removeCodeExample = () => p.remove();
+
   const circSize = 30;
   let colors = [
   "AliceBlue ",
@@ -152,22 +156,18 @@
   ];
   let i=0;
 
-  function setup() {
-    let canvas = createCanvas(600, 600);
-    canvas.parent('#code-wrapper');
-    frameRate(5);
+  p.setup = function() {
+    p.createCanvas(600, 600);
+    p.frameRate(5);
   }
 
-  function draw() {
-      background('black');
+  p.draw = function() {
+    p.background('black');
     
     //draw triangle part of tree
-    //  xm: middle x
-    //  yb: bottom y
-    //  w: width
     function branch(xm, yb, w, clr) {
-      fill('green');
-      noStroke();
+      p.fill('green');
+      p.noStroke();
       const h = w/2;
       const x1 = xm - w/2;
       const y1 = yb;
@@ -175,11 +175,11 @@
       const y2 = yb;
       const x3 = xm;
       const y3 = yb - h;
-      triangle(x1, y1, x2, y2, x3, y3);
-      fill(clr);
-      ellipse(x1, y1, circSize);
-      ellipse(x2, y2, circSize);
-      ellipse(x3, y3, circSize);
+      p.triangle(x1, y1, x2, y2, x3, y3);
+      p.fill(clr);
+      p.ellipse(x1, y1, circSize);
+      p.ellipse(x2, y2, circSize);
+      p.ellipse(x3, y3, circSize);
     }
     
     branch(300, 450, 300, colors[i++ % colors.length]);
@@ -187,16 +187,12 @@
     branch(300, 250, 200, colors[i++ % colors.length]);
     
     //grass
-    fill('lawngreen');
-    rect(0, 550, 600, 100);
-    
+    p.fill('lawngreen');
+    p.rect(0, 550, 600, 100);
     
     //trunk
-    fill('brown');
-    rect(270, 450, 60, 100);
+    p.fill('brown');
+    p.rect(270, 450, 60, 100);
   }
-}
 
-
-
-
+}, 'code-wrapper');

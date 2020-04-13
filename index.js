@@ -14,7 +14,7 @@ $(document).ready(function() {
         $('#' + popupId).show();
     });
 
-    //---------- games ----------
+    //---------- jokes ----------
     {
         const jokes = [
             {
@@ -62,17 +62,12 @@ $(document).ready(function() {
 
     //---------- code ----------
     {
+        window.removeCodeExample = function() {};
         let codeNumber = -1;        
         function nextCode() {
             codeNumber = (codeNumber + 1) % 6;
-            // console.log('coding/c' + codeNumber + '.js');
             $('#code-wrapper').html('');
             $.getScript('coding/c' + codeNumber + '.js');
-            // $('#code-example').attr('src', 'coding/c' + codeNumber + '.js');       
-        
-            // !!!!!!!!!!!!!!!!!!!!!11why not worqking???????????????   
-            // remeber to move canvas in all sketches 
-
         }
         $('#next-code').click(nextCode);
         $('#next-code').click();
