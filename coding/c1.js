@@ -3,16 +3,16 @@ new p5(p => {
   removeCodeExample();
   removeCodeExample = () => p.remove();
   
-  const names = ['Mama', 'Daddy', 'Indy', 'Stella', 'Hattie', 'grandma', 'granda'];
-  const colors = ['red', 'orange', 'green', 'MediumTurquoise ', 'magenta', 'lawngreen', 'orangered'];
-  const x = [60, 160, 260, 360, 460, 560, 660];
-  const y = [50, 50, 50, 50, 50, 50, 50];
+  const names = ['Muppet', 'Dooby', 'Indilios', 'Stelloy', 'Hoopy'];
+  const colors = ['red', 'orange', 'green', 'MediumTurquoise ', 'magenta'];
+  const x = [60, 160, 260, 360, 460];
+  const y = [50, 50, 50, 50, 50];
 
-  const finish = 600;
+  const finish = 400;
   const circleWidth = 90;
 
   p.setup = function() {
-    p.createCanvas(720, 700);
+    p.createCanvas(510, 500);
     p.textSize(16);
     p.textAlign('center');
     var img;
@@ -22,8 +22,6 @@ new p5(p => {
   }
 
   p.draw = function() {
-    
-    console.log('GAME!');
 
     function pig() {
       
@@ -31,41 +29,42 @@ new p5(p => {
       
       //body
       p.fill('hotpink');
-      p.rect(80, 250, 250, 150);
+      p.rect(30, 250, 250, 150);
 
       //head
-      p.ellipse(90, 280, 130, 130);
+      p.ellipse(40, 280, 130, 130);
 
       //legs         
+      p.rect(50, 400, 20, 50);
       p.rect(100, 400, 20, 50);
       p.rect(150, 400, 20, 50);
       p.rect(200, 400, 20, 50);
-      p.rect(250, 400, 20, 50);
 
       //Face
-      p.ellipse(85, 300, 70, 50); 
+      p.ellipse(35, 300, 70, 50); 
       p.fill('black');
-      p.ellipse(70, 296, 20, 20);
-      p.ellipse(100, 296, 20, 20);
+      p.ellipse(20, 296, 20, 20);
+      p.ellipse(50, 296, 20, 20);
       p.fill('blue');
-      p.ellipse(100, 250, 20, 20);       
-      p.ellipse(65, 250, 20, 20);       
+      p.ellipse(50, 250, 20, 20);       
+      p.ellipse(15, 250, 20, 20);       
 
       //ears
       p.fill('hotpink');
-      p.triangle(60, 225, 70, 200, 80, 220); 
-      p.triangle(90, 225, 100, 200, 110, 224);   
+      p.triangle(10, 225, 20, 200, 30, 220); 
+      p.triangle(40, 225, 50, 200, 60, 224);   
 
       //Tail
       p.stroke('hotpink')
       p.strokeWeight(15);
-      p.line(410, 300, 320, 300);
-      p.line(410, 300, 420, 355);
+      p.line(310, 300, 270, 300);
+      p.line(310, 300, 370, 355);
       
       p.translate(-100, 190);
       
     }
     
+    //winning line
     p.background('#4169E1');
     p.stroke('black');
     p.line(0, finish, 720, finish);
@@ -86,7 +85,7 @@ new p5(p => {
         p.noStroke();
         p.textSize(60);
         p.textFont('cursive');
-        p.text(names[i], 330, 165);
+        p.text(names[i], 250, 165);
         p.noLoop();
         return;
       }

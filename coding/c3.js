@@ -157,12 +157,14 @@ new p5(p => {
   let i=0;
 
   p.setup = function() {
-    p.createCanvas(600, 600);
+    p.createCanvas(470, 500);
     p.frameRate(5);
   }
 
   p.draw = function() {
     p.background('black');
+
+    p.translate(-70, -100);
     
     //draw triangle part of tree
     function branch(xm, yb, w, clr) {

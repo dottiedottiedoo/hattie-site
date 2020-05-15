@@ -2,8 +2,10 @@
 <head>
   <meta charset="utf-8">
   <title>Hattie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="images/cow-emoji.png">
   <link href="https://fonts.googleapis.com/css?family=Coiny|Open+Sans" rel="stylesheet"></link>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css"></link>
   <script src='jquery-3.3.1.min.js'></script>
   <script src="p5.min.js"></script>
 </head>
@@ -15,37 +17,37 @@
     <img id='graffiti' src="images/graffiti.PNG">
   </div>
   
-
+  
   <!-- side -->
   <div id='side'>
     
     <div id='me'>
-      Me
+      <span class="side-label">Me</span>
       <img src="images/me.PNG">
     </div>
     
     <div id='pictures'>
-      Pictures
+      <span class="side-label">Pictures</span>
       <img src="images/photos.png">
     </div>
     
-    <div id='Videos'>
-      Videos
+    <div id='videos'>
+      <span class="side-label">Videos</span>
       <img src="images/films.png">
     </div>
 
     <div id='jokes'>
-      Jokes
+      <span class="side-label">Jokes</span>
       <img  src="images/jokes.PNG">
     </div>
     
     <div id='games'>
-      Games
+      <span class="side-label">Games</span>
       <img src="images/games.png">
     </div>
     
     <div id='code'>
-      Code
+      <span class="side-label">Code</span>
       <img src="images/code.png">
     </div>
 
@@ -55,11 +57,10 @@
   <!-- popups -->
   
   <div id='me-popup' class="popup">
-    <img id='me-picture' src="images/tiger.jfif">
+    <img id='me-picture' src="images/profile.png" >
     <h1>Hello, I am HATTIE!</h1>
-    <p>I live in France and I am 8.</p>
     <p>Here is me with my brother and my dogs.</p>
-    <p>I hope you enjoy looking at my website.</p>
+    <p>I hope you enjoy looking at my website</p>
   </div>
 
   <div id='pictures-popup' class="popup">
@@ -68,10 +69,8 @@
   </div>
 
   <div id='videos-popup' class="popup">
-
-<!-- !!!!!!!!!!!!!!!!!WHY IS POPUP NOT POPPING UP??????????????????????
-get video icon -->
-
+    <script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/youtube.xml&amp;up_channel=YourChannelName&amp;synd=open&amp;w=320&amp;h=390&amp;title=&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js"></script>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jbyVpkBi-Vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
   <div id='jokes-popup' class="popup">
@@ -110,9 +109,9 @@ get video icon -->
     <div class="splitter"></div>
 
     <img class="screenshot" src="images/screenshots/trove.jfif">
-    <h2>Trove: 10/10</h2>
+    <h2>Trove: 7/10</h2>
     <p><b>About:</b> A "massively multiplayer online role-playing game" but can also be played individually. You can mine or steal materials and use them to create different objects and rides.</p>
-    <p><b>Good:</b> Fast and simple (but tricky!).  It has multiple worlds of different scenary.</p>
+    <p><b>Good:</b> It has multiple worlds of different scenary. And has daily challenges to complete.</p>
     <p><b>Bad:</b> You need certain amounts of Trove Mastery to travel through some portals.</p>
 
     <div class="splitter"></div>
@@ -123,11 +122,32 @@ get video icon -->
     <p><b>Good:</b> Great power-ups.</p>  
     <p><b>Bad:</b> Quite short.</p>
   
-    </div>
+    <div class="splitter"></div>
+
+    <img class="screenshot" src="images/screenshots/rime.jpg">
+    <h2>Rime: 9/10</h2>
+    <p><b>About:</b> A young boy in a an imginary world made up by his father. A mix of puzzle and action.</p>
+    <p><b>Good:</b> Great scenery and characters.</p>  
+    <p><b>Bad:</b> The answers to the puzzles can be quite puzzling.</p>
+
+    <div class="splitter"></div>
+
+    <img class="screenshot" src="images/grabbed-by-the-ghoulies.jpg">
+    <h2>Grabbed By The Ghoulies: 8/10</h2>
+    <p><b>About:</b>A boy(cooper) and his girlfreind/sister get trapped in a old haunted house owned by a mad proffesor and they must fight skeltons, zombies, the reaper
+       and other monstorsto escape.</p>
+    <p><b>Good:</b> Funny characters. Has extra challenges to unlock</p>  
+    <p><b>Bad:</b> It may feel a bit old </p>
+
+
+  </div>
+
+</div>
 
   <div id='code-popup' class="popup">
+    <button id='rerun-code'>Play again</button>
     <div id='code-wrapper'></div>
-    <div id='next-code'>&#8250;</div>
+    <div id='next-code'>›</div>
   </div>
   
   <script src="index.js"></script>

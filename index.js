@@ -28,15 +28,36 @@ $(document).ready(function() {
             {
                 q: 'What did the 0 say to the 8?',
                 a: 'Nice belt!'
-            }
+            },
+             
+            {
+                q: 'I challenged 1 to a fight. He brought with him 3, 5, 7 and 9.', 
+                a: 'That\'s when I knew the odds were against me.'
+            },
+        
+            {
+                q:'Knock knock. Who\'s there?<br><br>Boo.<br><br>Boo who?',
+                a: 'No need to cry.'
+            },
+            
+            {
+                q: 'Why did Tigger look in the tiolet?',
+                a: 'Because he was looking for Pooh.'
+            },
+        
+            {
+                q: 'What do you call a magician who has lost his magic?',
+                a: 'Ian.'
+            }    
+       
         ];
 
         let jokeNumber = -1;
         
         function newJoke() {
             jokeNumber = (jokeNumber + 1) % jokes.length;
-            $('#joke-question').text(jokes[jokeNumber].q);
-            $('#joke-answer').text('');
+            $('#joke-question').html(jokes[jokeNumber].q);
+            $('#joke-answer').html('');
         }
         $('#joke-new').click(newJoke);
         newJoke();
@@ -63,14 +84,21 @@ $(document).ready(function() {
     //---------- code ----------
     {
         window.removeCodeExample = function() {};
-        let codeNumber = -1;        
-        function nextCode() {
-            codeNumber = (codeNumber + 1) % 6;
+        let codeNumber = 0;        
+        
+        function runCodeExample() {
             $('#code-wrapper').html('');
             $.getScript('coding/c' + codeNumber + '.js');
         }
-        $('#next-code').click(nextCode);
-        $('#next-code').click();
+
+        $('#rerun-code').click(runCodeExample);
+
+        $('#next-code').click(function() {
+            codeNumber = (codeNumber + 1) % 6;
+            runCodeExample();
+        });
+
+        runCodeExample();
     }
 
 });

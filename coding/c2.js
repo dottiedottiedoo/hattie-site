@@ -4,44 +4,66 @@ new p5(p => {
   removeCodeExample = () => p.remove();
 
   p.setup = function() {
-    p.createCanvas(600, 600);
-    p.background('white');
-    
-    //body
-    p.fill('pink');
-    p.rect(80, 250, 250, 150);
-    
-    //head
-    p.fill('pink');
-    p.ellipse(90, 280, 130, 130);
-
-    //legs        
-    p.fill('pink');  
-    p.rect(100, 400, 20, 50);
-    p.rect(150, 400, 20, 50);
-    p.rect(200, 400, 20, 50);
-    p.rect(250, 400, 20, 50);
-
-    //Face
-    p.ellipse(85, 300, 70, 50); 
-    p.fill('black');
-    p.ellipse(70, 296, 20, 20);
-    p.ellipse(100, 296, 20, 20);
-    p.fill('blue');
-    p.ellipse(100, 250, 20, 20);       
-    p.ellipse(65, 250, 20, 20);       
-    
-    //ears
-    p.fill('pink');
-    p.triangle(60, 225, 70, 200, 80, 220); 
-    p.triangle(90, 225, 100, 200, 110, 224);   
-    
-    //Tail
-    p.stroke('pink')
-    p.strokeWeight(15);
-    p.line(410, 300, 320, 300);
-    p.line(410, 300, 420, 355);         
-                
+    p.createCanvas(400, 400);
+    p.frameRate(10);
   }
   
+  p.draw = function() {
+    
+    p.background(220);
+
+    
+    // top-left
+    p.fill(220);
+    p.rect(0, 0, 400, 400);
+    for(var x = 0; x <= p.mouseX; x += 50) {
+     for (var y = 0; y <= p.mouseY; y += 50) { 
+        p.noStroke();
+        p.fill(0, 0, p.random(255));
+        p.rect(x, y, 45, 45);
+     }
+    } 
+    
+    // top-right
+    p.fill(220);
+    p.rect(p.mouseX, 0, 400, 400);
+    for(var x = p.mouseX; x <= 400; x += 50) {
+     for (var y = 0; y <= 400; y += 50) { 
+        p.noStroke();
+        p.fill(p.random(255), 0, 0);
+        p.rect(x, y, 45, 45);
+      }
+    } 
+    
+    // bottom-left 
+    p.fill(220);
+    p.rect(0, p.mouseY, 400, 400);
+    for(var x = 0; x <= 400; x += 50) {
+     for (var y = p.mouseY; y <= 400; y += 50) { 
+        p.noStroke();
+        p.fill(p.random(255));
+        p.rect(x, y, 45, 45);
+      }
+    } 
+  
+    // bottom-right
+    p.fill(220);
+    p.rect(p.mouseX, p.mouseY, 400, 400);
+    for(var x = p.mouseX; x <= 400; x += 50) {
+     for (var y = p.mouseY; y <= 400; y += 50) { 
+        p.noStroke();
+        p.fill(0, p.random(255), 0);
+        p.rect(x, y, 45, 45);
+      }
+    }
+
+    // text
+    p.stroke("yellow");
+    p.fill("yellow");
+    p.textSize(30);
+    p.text("Move mouse over example", 20, 30);
+
+  }
+
+
 }, 'code-wrapper');
