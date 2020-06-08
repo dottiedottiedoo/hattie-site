@@ -75,7 +75,7 @@ $(document).ready(function() {
         function nextPicture() {
             pictureNumber = (pictureNumber + 1) % 8;
             $('#picture')
-                .css('background-image', 'url("images/pictures/p' + pictureNumber + '.JPG"')
+                .css('background-image', 'url("images/pictures/p' + pictureNumber + '.jpg"')
         }
         $('#next-picture').click(nextPicture);
         $('#next-picture').click();
